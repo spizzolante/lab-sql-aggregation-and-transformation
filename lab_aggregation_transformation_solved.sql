@@ -93,3 +93,7 @@ ORDER BY AVG(length) DESC;
 
 -- 3. Bonus: determine which last names are not repeated in the table actor.
 
+SELECT last_name 
+FROM sakila.actor
+GROUP BY last_name
+HAVING COUNT(*) = 1;
